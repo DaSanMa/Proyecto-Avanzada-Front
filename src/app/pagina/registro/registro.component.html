@@ -1,0 +1,65 @@
+<form #f="ngForm" (ngSubmit)="registrar()">
+    <div>
+        <label>Cédula: </label>
+        <input type="text" required maxlength="10" name="cedula" [(ngModel)]="registroPacienteDTO.cedula" />
+    </div>
+
+    <div>
+        <label>Nombre: </label>
+        <input type="text" required name="nombre" [(ngModel)]="registroPacienteDTO.nombre" />
+    </div>
+
+    <div>
+        <label>Teléfono: </label>
+        <input type="text" required maxlength="10" name="telefono" [(ngModel)]="registroPacienteDTO.telefono" />
+    </div>
+
+    <div>
+        <label>Foto: </label>
+        <input type="text" required name="urlFoto" [(ngModel)]="registroPacienteDTO.urlFoto" />
+    </div>
+
+    <div>
+        <label>Ciudad: </label>
+        <input type="text" required name="ciudad" [(ngModel)]="registroPacienteDTO.ciudad" />
+    </div>
+
+    <div>
+        <label>Fecha de nacimiento: </label>
+        <input type="date" required name="fechaNacimiento" [(ngModel)]="registroPacienteDTO.fechaNacimiento" />
+    </div> 
+
+    <div>
+        <label>Alergias: </label>
+        <input type="text" required name="alergias" [(ngModel)]="registroPacienteDTO.alergias" />
+    </div>
+
+    <div>
+        <label>EPS: </label>
+        <input type="text" required name="eps" [(ngModel)]="registroPacienteDTO.eps" />
+    </div>
+
+    <div>
+        <label>Tipo de sangre: </label>
+        <input type="text" required name="tipoSangre" [(ngModel)]="registroPacienteDTO.tipoSangre" />
+    </div>
+
+    <div>
+        <label>Correo electrónico: </label>
+        <input type="email" email required name="correo" [(ngModel)]="registroPacienteDTO.correo" />
+    </div>
+
+    <div>
+        <label>Contraseña: </label>
+        <input type="password" required name="password" [(ngModel)]="registroPacienteDTO.password" />
+    </div>
+
+    <div>
+        <label >Repetir contraseña: </label>
+        <input type="password" name="confirmaPassword" [(ngModel)]="registroPacienteDTO.confirmaPassword" required />
+        <p *ngIf="!sonIguales()" >Las contraseñas no coinciden</p>
+    </div>
+    
+    <button type="submit" [disabled]="f.invalid || !sonIguales()" >Registrarse</button>
+    
+</form>
