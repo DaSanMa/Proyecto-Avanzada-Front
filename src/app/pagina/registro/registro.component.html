@@ -16,17 +16,17 @@
 
     <div>
         <label>Foto: </label>
-        <input type="text" required name="urlFoto" [(ngModel)]="registroPacienteDTO.urlFoto" />
+        <input type="file" required (change)="onFileChange($event)" />
     </div>
 
     <div>
         <label>Ciudad: </label>
         <select name="ciudad" required [(ngModel)]="registroPacienteDTO.ciudad" >
-        <option value="" selected >Seleccione una ciudad</option>
-        <option [value]="item" *ngFor="let item of ciudades; index as i" >{{item}}</option>
+            <option value="" selected >Seleccione una ciudad</option>
+            <option [value]="item" *ngFor="let item of ciudades; index as i" >{{item}}</option>
         </select>
     </div>
-    
+
     <div>
         <label>Fecha de nacimiento: </label>
         <input type="date" required name="fechaNacimiento" [(ngModel)]="registroPacienteDTO.fechaNacimiento" />
@@ -39,12 +39,18 @@
 
     <div>
         <label>EPS: </label>
-        <input type="text" name="eps" [(ngModel)]="registroPacienteDTO.eps" />
+        <select name="EPS" required [(ngModel)]="registroPacienteDTO.eps" >
+            <option value="" selected >Seleccione una EPS</option>
+            <option [value]="item" *ngFor="let item of eps; index as i" >{{item}}</option>
+        </select>
     </div>
-    
+
     <div>
         <label>Tipo de sangre: </label>
-        <input type="text" required name="tipoSangre" [(ngModel)]="registroPacienteDTO.tipoSangre" />
+        <select name="Tipo de sangre" required [(ngModel)]="registroPacienteDTO.tipoSangre" >
+            <option value="" selected >Seleccione un tipo de sangre</option>
+            <option [value]="item" *ngFor="let item of tipoSangre; index as i" >{{item}}</option>
+        </select>
     </div>
 
     <div>
