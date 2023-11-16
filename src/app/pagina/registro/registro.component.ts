@@ -75,8 +75,8 @@ export class RegistroComponent {
   //Metodo para capturar files
   public onFileChange(event:any){
     if(event.target.files.length > 0){
-      this.archivos = event.target.files;
-      console.log(File);
+      const files = event.target.files;
+      console.log(files);
     }
   }
 }
