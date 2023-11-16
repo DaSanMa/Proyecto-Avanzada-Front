@@ -1,1 +1,15 @@
-<p>login works!</p>
+<form #f="ngForm" (ngSubmit)="ingresar()">
+
+    <div>
+        <label>Correo electrónico: </label>
+        <input type="email" email required name="correo" [(ngModel)]="loginPacienteDTO.correo" />
+    </div>
+
+    <div>
+        <label>Contraseña: </label>
+        <input type="password" required name="password" [(ngModel)]="loginPacienteDTO.password" />
+    </div>
+    
+    <button type="submit" [disabled]="f.invalid " >Ingresar</button>
+
+</form>
