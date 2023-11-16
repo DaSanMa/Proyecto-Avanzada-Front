@@ -17,13 +17,13 @@ export class RegistroComponent {
   //integración del back por API REST
   public registrar(){
     console.log(this.registroPacienteDTO);
-    }
+  }
 
   //Confirmar password
   public sonIguales():boolean{
     return this.registroPacienteDTO.password == this.registroPacienteDTO.confirmaPassword;
-    }
-
+  }
+  
 }
   
 

@@ -21,9 +21,12 @@
 
     <div>
         <label>Ciudad: </label>
-        <input type="text" required name="ciudad" [(ngModel)]="registroPacienteDTO.ciudad" />
+        <select name="ciudad" required [(ngModel)]="registroPacienteDTO.ciudad" >
+        <option value="" selected >Seleccione una ciudad</option>
+        <option [value]="item" *ngFor="let item of ciudades; index as i" >{{item}}</option>
+        </select>
     </div>
-
+    
     <div>
         <label>Fecha de nacimiento: </label>
         <input type="date" required name="fechaNacimiento" [(ngModel)]="registroPacienteDTO.fechaNacimiento" />
@@ -36,9 +39,9 @@
 
     <div>
         <label>EPS: </label>
-        <input type="text" required name="eps" [(ngModel)]="registroPacienteDTO.eps" />
+        <input type="text" name="eps" [(ngModel)]="registroPacienteDTO.eps" />
     </div>
-
+    
     <div>
         <label>Tipo de sangre: </label>
         <input type="text" required name="tipoSangre" [(ngModel)]="registroPacienteDTO.tipoSangre" />
@@ -61,5 +64,5 @@
     </div>
     
     <button type="submit" [disabled]="f.invalid || !sonIguales()" >Registrarse</button>
-    
+
 </form>
