@@ -46,11 +46,13 @@ export class RegistroComponent {
 
   //función para cargar ciudades
   private cargarCiudades(){
-    this.ciudades.push("Armenia");
-    this.ciudades.push("Calarcá");
-    this.ciudades.push("Pereira");
-    this.ciudades.push("Manizales");
+    this.ciudades.push("Bogotá");
+    this.ciudades.push("Cali");
+    this.ciudades.push("Barranquilla");
+    this.ciudades.push("Cartagena");
     this.ciudades.push("Medellín");
+    this.ciudades.push("Bucaramanga");
+    this.ciudades.push("Cucuta");
   }
 
   //función para cargar EPS
