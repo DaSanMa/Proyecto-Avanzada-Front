@@ -9,6 +9,7 @@ import { RegistroComponent } from './pagina/registro/registro.component';
 import { GestionPqrsComponent } from './pagina/gestion-pqrs/gestion-pqrs.component';
 import { CrearPqrsComponent } from './pagina/crear-pqrs/crear-pqrs.component';
 import { DetallePqrsComponent } from './pagina/detalle-pqrs/detalle-pqrs.component';
+import { GestionCitasComponent } from './pagina/gestion-citas/gestion-citas.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { DetallePqrsComponent } from './pagina/detalle-pqrs/detalle-pqrs.compone
     RegistroComponent,
     GestionPqrsComponent,
     CrearPqrsComponent,
-    DetallePqrsComponent
+    DetallePqrsComponent,
+    GestionCitasComponent
   ],
   imports: [
     BrowserModule,
