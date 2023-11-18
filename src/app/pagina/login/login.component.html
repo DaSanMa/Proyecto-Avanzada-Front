@@ -1,15 +1,26 @@
 <form #f="ngForm" (ngSubmit)="ingresar()">
 
-    <div>
-        <label>Correo electrónico: </label>
-        <input type="email" email required name="correo" [(ngModel)]="loginPacienteDTO.correo" />
+    <div class="mb-3 row">
+        <label class="col-sm-2 col-form-label">Correo electrónico: </label>
+        <div class="col-sm-10">
+            <input #correo="ngModel"
+                [ngClass]="correo.invalid && (correo.dirty || correo.touched) ? 'is-invalid' : ''" type="email"
+                name="Correo" class="form-control" required [(ngModel)]="loginPacienteDTO.correo" />
+        </div>
     </div>
 
-    <div>
-        <label>Contraseña: </label>
-        <input type="password" required name="password" [(ngModel)]="loginPacienteDTO.password" />
+    <div class="mb-3 row">
+        <label class="col-sm-2 col-form-label">Constraseña: </label>
+        <div class="col-sm-10">
+            <input #password="ngModel"
+                [ngClass]="password.invalid && (password.dirty || password.touched) ? 'is-invalid' : ''"
+                type="password" name="password" class="form-control" required
+                [(ngModel)]="loginPacienteDTO.password" />
+        </div>
     </div>
     
-    <button type="submit" [disabled]="f.invalid " >Ingresar</button>
+    <button class="btn btn-primary" type="submit" [disabled]="f.invalid">
+        <i class="fa-solid fa-circle-plus me-1"></i>Ingresar
+    </button>
 
 </form>
