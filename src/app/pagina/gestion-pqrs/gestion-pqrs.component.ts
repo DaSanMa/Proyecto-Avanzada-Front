@@ -7,8 +7,6 @@ import { PqrsService } from 'src/app/servicios/pqrs.service';
   templateUrl: './gestion-pqrs.component.html',
   styleUrls: ['./gestion-pqrs.component.css']
 })
-
-
 export class GestionPqrsComponent {
 
   pqrs: ItemPQRSDTO[];

@@ -36,7 +36,6 @@ export class RegistroComponent {
     } else {
       console.log("Suba una foto");
     }
-    
   }
 
   //Confirmar password
