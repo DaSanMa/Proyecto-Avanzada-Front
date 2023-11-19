@@ -9,7 +9,8 @@ import { RegistroComponent } from './pagina/registro/registro.component';
 import { GestionPqrsComponent } from './pagina/gestion-pqrs/gestion-pqrs.component';
 import { CrearPqrsComponent } from './pagina/crear-pqrs/crear-pqrs.component';
 import { DetallePqrsComponent } from './pagina/detalle-pqrs/detalle-pqrs.component';
-import { GestionCitasComponent } from './pagina/gestion-citas/gestion-citas.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AlertaComponent } from './pagina/alerta/alerta.component';
 
 @NgModule({
   declarations: [
@@ -20,12 +21,14 @@ import { GestionCitasComponent } from './pagina/gestion-citas/gestion-citas.comp
     GestionPqrsComponent,
     CrearPqrsComponent,
     DetallePqrsComponent,
-    GestionCitasComponent
+    AlertaComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
